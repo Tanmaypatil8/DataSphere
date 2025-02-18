@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Retention Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Retention Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="satisfaction_level">Satisfaction Level:</label>
+            <input type="text" id="satisfaction_level" name="satisfaction_level" required><br><br>
+            
+            <label for="last_evaluation">Last Evaluation:</label>
+            <input type="text" id="last_evaluation" name="last_evaluation" required><br><br>
+            
+            <label for="number_project">Number of Projects:</label>
+            <input type="text" id="number_project" name="number_project" required><br><br>
+            
+            <label for="average_montly_hours">Average Monthly Hours:</label>
+            <input type="text" id="average_montly_hours" name="average_montly_hours" required><br><br>
+            
+            <label for="time_spend_company">Time Spent at Company:</label>
+            <input type="text" id="time_spend_company" name="time_spend_company" required><br><br>
+            
+            <label for="Work_accident">Work Accident (0 or 1):</label>
+            <input type="text" id="Work_accident" name="Work_accident" required><br><br>
+            
+            <label for="promotion_last_5years">Promotion in Last 5 Years (0 or 1):</label>
+            <input type="text" id="promotion_last_5years" name="promotion_last_5years" required><br><br>
+            
+            <label for="Department">Department (accounting, technical, hr, support, IT, product_mng, marketing):</label>
+            <input type="text" id="Department" name="Department" required><br><br>
+            
+            <label for="salary">Salary (low, medium, high):</label>
+            <input type="text" id="salary" name="salary" required><br><br>
+            
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
